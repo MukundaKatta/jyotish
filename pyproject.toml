@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "jyotish"
+version = "0.1.0"
+description = "Vedic Astrology Engine"
+authors = [{name = "Mukunda Katta"}]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "pydantic>=2.0", "click>=8.0", "rich>=13.0"]
+
+[project.scripts]
+jyotish = "jyotish.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
